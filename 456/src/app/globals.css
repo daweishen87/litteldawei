@@ -151,3 +151,135 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8a
 @keyframes fore-c{0%,100%{transform:rotate(0)}42%,62%{transform:rotate(-135deg)}}
 @media (prefers-reduced-motion:reduce){.px *{animation:none!important}}
 @media(min-width:820px){.hero{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;padding:0;border-radius:0 0 30px 30px}.hero-copy{padding:40px 48px}.squad-grid{grid-template-columns:repeat(4,1fr)}.break img{max-width:560px;margin:0 auto}.story-photo{max-width:480px}}
+
+
+/* Editorial polish: calmer type, warmer depth, and phone-first spacing */
+body{font-size:16px;line-height:1.72;letter-spacing:0;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+h1,h2,h3{letter-spacing:-.025em}
+h2{font-weight:600;line-height:1.2}
+p{max-width:38em}
+.slogan{font-family:"Helvetica Neue",Arial,var(--sans);font-size:12px;letter-spacing:.045em;line-height:1.45}
+.eyebrow{font-family:"Helvetica Neue",Arial,var(--sans);font-size:11px;letter-spacing:.12em;line-height:1.4}
+.pill{min-height:48px;padding-inline:26px;font-weight:600;transition:transform .18s ease,background-color .18s ease,color .18s ease}
+.pill:hover{transform:translateY(-1px)}
+
+/* The mascot section is a small editorial feature, not a row of tiny icons. */
+.squad{background:linear-gradient(180deg,#f3f1ec 0%,#f8f6f1 100%);overflow:hidden}
+.squad-heading{max-width:660px;margin:0 auto 30px}
+.squad-kicker{margin:0 0 10px;font:600 10px/1.4 "Helvetica Neue",Arial,var(--sans);letter-spacing:.17em;color:#77736c}
+.squad-heading h2{margin:0 0 10px}
+.squad-intro{margin:0;color:#6c6861;font-size:15px;line-height:1.65}
+.squad-primary-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;max-width:760px;margin:0 auto}
+.squad-secondary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:760px;margin:16px auto 0}
+.exercise-card{min-width:0;margin:0;padding:10px 8px 14px;border:1px solid rgba(42,37,30,.08);border-radius:22px;background:rgba(255,255,255,.66);box-shadow:0 10px 28px rgba(42,37,30,.045)}
+.exercise-featured{padding:12px 10px 15px}
+.exercise-card figcaption{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:2px;color:#37342f;font-size:15px;font-weight:600;line-height:1.4}
+.exercise-card figcaption span{color:#91897e;font:500 10px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.08em}
+.px{display:block;width:100%;height:auto;overflow:visible}
+.px *{transform-box:view-box}
+.px .press-bar{transform-origin:50% 48px}
+.px .press-arm{transform-box:view-box}
+.px-bench .press-bar{animation:bench-press 3.8s cubic-bezier(.42,0,.58,1) infinite}
+.px-bench .press-arm-left{transform-origin:111px 131px;animation:bench-arm 3.8s cubic-bezier(.42,0,.58,1) infinite}
+.px-bench .press-arm-right{transform-origin:209px 131px;animation:bench-arm 3.8s cubic-bezier(.42,0,.58,1) infinite}
+.px-shoulder .press-bar{animation:shoulder-press 4.1s cubic-bezier(.42,0,.58,1) infinite}
+.px-shoulder .press-arm-left{transform-origin:111px 126px;animation:shoulder-arm 4.1s cubic-bezier(.42,0,.58,1) infinite}
+.px-shoulder .press-arm-right{transform-origin:209px 126px;animation:shoulder-arm 4.1s cubic-bezier(.42,0,.58,1) infinite}
+.px-bench .mascot-body{transform-origin:50% 100%;animation:bench-breathe 3.8s ease-in-out infinite}
+.px-shoulder .mascot-body{transform-origin:50% 100%;animation:shoulder-breathe 4.1s ease-in-out infinite}
+.px-squash .press-bar{transform-origin:50% 39px;animation:squash-bar 5.6s ease-in-out infinite}
+.px-squash .mascot-body{transform-origin:50% 100%;animation:squash-body 5.6s ease-in-out infinite}
+.px-curl .curl-upper-arm{transform-box:view-box;transform-origin:190px 128px;animation:curl-arm 3.5s cubic-bezier(.42,0,.58,1) infinite}
+@keyframes bench-press{0%,12%,100%{transform:translateY(0)}42%,52%{transform:translateY(38px)}84%{transform:translateY(0)}}
+@keyframes bench-arm{0%,12%,100%{transform:scaleY(1)}42%,52%{transform:scaleY(.53)}84%{transform:scaleY(1)}}
+@keyframes shoulder-press{0%,13%,100%{transform:translateY(0)}43%,54%{transform:translateY(40px)}86%{transform:translateY(0)}}
+@keyframes shoulder-arm{0%,13%,100%{transform:scaleY(1)}43%,54%{transform:scaleY(.50)}86%{transform:scaleY(1)}}
+@keyframes bench-breathe{0%,12%,100%{transform:translateY(0) scale(1)}45%,53%{transform:translateY(1px) scale(1.008,.992)}84%{transform:translateY(0) scale(1)}}
+@keyframes shoulder-breathe{0%,13%,100%{transform:translateY(0)}43%,54%{transform:translateY(1px)}86%{transform:translateY(0)}}
+@keyframes squash-bar{0%,12%,100%{transform:translateY(0)}35%,74%{transform:translateY(44px)}88%{transform:translateY(-3px)}}
+@keyframes squash-body{0%,12%,100%{transform:scale(1)}35%,74%{transform:scale(1.08,.72)}88%{transform:scale(.98,1.06)}}
+@keyframes curl-arm{0%,100%{transform:rotate(0)}42%,62%{transform:rotate(-54deg)}}
+.squad-note{max-width:760px;margin:16px auto 0;padding-top:12px;border-top:1px solid rgba(42,37,30,.1);font-size:12px;line-height:1.65}
+@media(prefers-reduced-motion:reduce){.pill{transition:none}.px *{animation:none!important}}
+
+@media(max-width:600px){
+  html{scroll-padding-top:68px}
+  .wrap{padding-inline:20px}
+  section{padding-block:58px}
+  .top{height:60px;padding-inline:18px}
+  .top-logo{height:34px}
+  .top .pill{min-height:40px;padding-inline:17px;font-size:14px}
+  .hero{padding-bottom:30px;border-radius:0 0 22px 22px}
+  .hero-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+  .hero-copy{padding:22px 20px 0}
+  .hero h1{font-size:clamp(32px,8.4vw,42px);line-height:1.15;letter-spacing:-.035em;margin-bottom:12px}
+  .hero-l1{font-size:16px;line-height:1.55}
+  .hero-l2{font-size:14px;line-height:1.65}
+  .btn-row{display:grid;grid-template-columns:1fr;gap:9px;margin-top:18px}
+  .btn-row .pill{width:100%;min-height:48px}
+  .note-light{font-size:12px}
+  .facts{padding-top:38px;padding-bottom:14px}
+  .slogan{margin-bottom:20px}
+  .facts-grid{gap:14px 10px;font-size:16px;line-height:1.5}
+  .statement{padding-top:38px;padding-bottom:38px}
+  .statement p{font-size:clamp(24px,6.6vw,32px);line-height:1.48}
+  .break img{width:100%;height:auto}
+  .stats{gap:24px 12px;padding-top:34px;padding-bottom:48px}
+  .stats b{font-size:clamp(30px,8.5vw,40px)}
+  .stats span{font-size:13px;line-height:1.5}
+  .stats-note{font-size:12px;line-height:1.6}
+  .product{padding-top:38px;padding-bottom:50px}
+  .tablist{margin:0 -20px 22px;padding-inline:20px;gap:2px}
+  .tablist button{padding:13px 14px;font-size:14px;min-height:48px}
+  .tabpanel{gap:20px}
+  .squad{padding-block:54px}
+  .squad-heading{margin-bottom:22px}
+  .squad-heading h2{font-size:clamp(28px,7.5vw,36px)}
+  .squad-intro{font-size:14px}
+  .squad-primary-grid{gap:12px}
+  .squad-secondary-grid{gap:9px;margin-top:12px}
+  .exercise-card{padding:8px 6px 12px;border-radius:18px}
+  .exercise-featured{padding:10px 8px 13px}
+  .exercise-card figcaption{font-size:14px}
+  .squad-note{font-size:11px}
+  .story .quote{font-size:clamp(27px,7.4vw,38px);line-height:1.2;letter-spacing:-.04em}
+  .story .dim{margin-bottom:28px}
+  .story p{font-size:15px;line-height:1.8}
+  .logo-inline{height:44px;margin:24px 0}
+  .founder{padding:28px 14px}
+  .founder-card{padding:14px 14px 26px;gap:24px;border-radius:22px}
+  .founder-photo{padding:18px;border-radius:17px}
+  .founder-photo img{max-height:340px}
+  .badge{top:12px;right:12px;padding:9px 14px;font-size:12px}
+  .founder-card h2{font-size:clamp(28px,7.5vw,38px)}
+  .card-no{font-size:42px;margin-top:18px}
+  .price-row{margin:20px 0 14px;font-size:14px}
+  .price-row b{font-size:42px}
+  .care-photos{gap:8px;margin-bottom:36px}
+  .care-photos img{border-radius:14px;aspect-ratio:4/5}
+  .care-list{margin:22px 0}
+  .care-list li{gap:14px;padding:18px 0}
+  .care-list .n{font-size:13px;min-width:1.8em}
+  .care-list b{font-size:18px}
+  .care-list p{font-size:14px;line-height:1.7}
+  .faq-sec{padding-block:54px}
+  #faq h2{text-align:left}
+  .faq summary{font-size:15px;line-height:1.55;padding:18px 34px 18px 0}
+  .faq summary::after{top:15px;font-size:24px}
+  .faq details p{font-size:14px;line-height:1.75;margin-bottom:18px}
+  .follow{padding:72px 0}
+  .follow h2{font-size:clamp(27px,7.6vw,38px);line-height:1.35;margin-bottom:24px}
+  .foot{padding:56px 0 38px}
+  .foot h3{font-size:clamp(26px,7vw,34px);margin-bottom:22px}
+  .foot-cols{gap:12px;margin:38px 0 28px}
+  .foot-cols span{font-size:12px;margin-bottom:16px}
+  .foot-cols a{font-size:15px;line-height:1.5;margin-bottom:16px}
+  .foot-brand{gap:12px;padding-top:26px;font-size:11px;line-height:1.5}
+  .foot-brand img{height:42px!important}
+  .foot-link{font-size:14px;margin-top:22px}
+}
+
+@media(min-width:640px){
+  .squad-primary-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .squad-secondary-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
