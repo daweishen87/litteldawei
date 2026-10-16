@@ -354,11 +354,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 }
 
 @media (max-width: 819px) {
-  .product-carousel-track { width: calc(100% + 48px); margin-inline: -24px; }
+  .product-carousel-shell { width: calc(100% + 48px); margin-inline: -24px; }
+  .product-carousel-track { width: 100%; margin-inline: 0; }
 }
 
 @media (max-width: 600px) {
-  .product-carousel-track { width: calc(100% + 40px); margin-inline: -20px; }
+  .product-carousel-shell { width: calc(100% + 40px); margin-inline: -20px; }
+  .product-carousel-track { width: 100%; margin-inline: 0; }
+  .product-carousel-arrow { width: 28px; height: 28px; font-size: 18px; }
+  .product-carousel-arrow-prev { left: 0; }
+  .product-carousel-arrow-next { right: 0; }
   .product-carousel-caption { margin-top: 12px; font-size: 13px; }
   .brand-portrait-tagline { font-size: 12px; }
 }
