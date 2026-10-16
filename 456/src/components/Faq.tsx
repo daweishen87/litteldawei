@@ -1,4 +1,7 @@
-import { faq } from "@/config/site";
+"use client";
+
+import { faq, site } from "@/config/site";
+import { trackEvent } from "@/lib/analytics";
 
 export function Faq() {
   return (
@@ -15,7 +18,7 @@ export function Faq() {
                 {item.link && (
                   <>
                     {" "}
-                    <a href={item.link.href} target="_blank" rel="noopener noreferrer">{item.link.text}</a>
+                    <a href={item.link.href} target="_blank" rel="noopener noreferrer" onClick={item.link.href === site.links.buy ? () => trackEvent("purchase_link_click", { placement: "faq", destination: "7eleven" }) : undefined}>{item.link.text}</a>
                   </>
                 )}
               </p>
