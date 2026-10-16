@@ -63,6 +63,19 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="brand-portrait-section" aria-label="DW 品牌形象照">
+          <Image
+            src="/images/dw-standalone-portrait.webp"
+            width={1108}
+            height={1477}
+            sizes="(max-width: 600px) 100vw, 1108px"
+            alt="DW 品牌形象照（完整未裁切）"
+            className="brand-portrait-image"
+          />
+          <p className="brand-portrait-tagline">DON&apos;T STOP UNTIL YOU WIN</p>
+          <p className="brand-portrait-quote">You don&apos;t have to be the best. Just keep going.</p>
+        </section>
+
         <section className="selection-section" id="fit">
           <div className="wrap selection-layout">
             <div className="section-heading">
