@@ -24,7 +24,7 @@ export default function FinderPage() {
         <div className="wrap page-hero">
           <p className="breadcrumb"><Link href="/">DW</Link>　/　護腕選購工具</p>
           <p className="eyebrow">DW WRIST WRAP FINDER</p>
-          <h1>護腕怎麼選，<br className="mobile-only" />先從你的訓練開始。</h1>
+          <h1>護腕怎麼選<br className="mobile-only" />先看你的訓練</h1>
           <p className="lead">用四個問題整理訓練類型、經驗、固定感偏好與預算。結果是一般性比較提示，也可能建議你先看其他款式。</p>
         </div>
         <WristWrapFinder />

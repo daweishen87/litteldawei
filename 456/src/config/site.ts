@@ -1,12 +1,12 @@
 // 商品價格、規格、連結與待確認資訊集中管理；未核實項目不自行補值。
 export const site = {
   name: "DW",
-  url: "https://litteldawei.vercel.app",
-  tagline: "DON’T STOP UNTIL YOU WIN.",
-  title: "DW Founder Edition｜日常重訓黑化護腕",
-  description: "DW Founder Edition 黑化護腕：全黑織紋、霧面 TPU Logo，為日常健身與重量訓練設計。查看實際產品細節、選購指南與目前預購資訊。",
+  url: "https://littledawei.vercel.app",
+  tagline: "Don’t stop until you win",
+  title: "DW Founder Edition｜一雙黑色護腕",
+  description: "DW Founder Edition 一雙全黑護腕，呈現全黑織紋與霧面 TPU Logo，適合日常健身與重量訓練。查看實拍細節、選購指南與目前預購資訊。",
   product: {
-    name: "DW Founder Edition｜黑化護腕",
+    name: "DW Founder Edition｜黑化護腕（一雙）",
     color: "黑色",
     size: "約 50 × 8 cm",
     logoMaterial: "霧面 TPU",

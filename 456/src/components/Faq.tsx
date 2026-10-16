@@ -7,7 +7,7 @@ export function Faq() {
   return (
     <section id="faq">
       <div className="wrap">
-        <h2><span className="zh">常見問題</span></h2>
+        <h2>FAQ</h2>
         <div className="faq">
           {faq.map((item) => (
             <details key={item.q}>

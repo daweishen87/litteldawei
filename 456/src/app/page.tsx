@@ -25,13 +25,12 @@ export default function Home() {
       <main id="top">
         <section className="hero">
           <div className="hero-visual">
-            <Image src="/images/dw-product-studio.jpg" alt="DW Founder Edition 黑色護腕實物，呈現全黑織紋與霧面 Logo" width={932} height={1800} priority sizes="(min-width: 820px) 52vw, 100vw" className="hero-img" />
+            <Image src="/images/dw-hero-cover.webp" alt="DW Founder Edition 一雙全黑護腕產品封面實拍" width={1024} height={1024} priority sizes="(min-width: 820px) 52vw, 100vw" className="hero-img" />
           </div>
           <div className="hero-copy">
-            <p className="eyebrow hero-eyebrow">DW · FOUNDER EDITION</p>
-            <h1>日常重訓，<br />一條黑色護腕。</h1>
-            <p className="hero-product">DW Founder Edition｜黑化護腕</p>
-            <p className="hero-l1">全黑織紋・霧面 TPU Logo</p>
+            <h1>日常訓練<br />一雙黑色護腕</h1>
+            <p className="hero-product">DW Founder Edition</p>
+            <p className="hero-l1">全黑織紋<br />霧面 TPU Logo</p>
             <p className="hero-l2">拇指環較輕薄，佩戴存在感較低；固定感可能不如較緊的設計。</p>
             <div className="hero-price"><b>NT${site.product.price}</b><span>網站目前列示首批預購價</span></div>
             <div className="btn-row">
@@ -43,9 +42,10 @@ export default function Home() {
         </section>
 
         <section className="product-facts wrap" aria-label="產品重點">
+          <p className="hero-slogan">Don’t stop until you win</p>
           <ul className="quick-facts">
+            <li><b>一雙入</b><span>Founder Edition 黑色護腕</span></li>
             <li><b>{site.product.size}</b><span>網站目前列示尺寸</span></li>
-            <li><b>輕薄拇指環</b><span>佩戴存在感較低</span></li>
             <li><b>日常重量訓練</b><span>目前產品定位</span></li>
           </ul>
         </section>
@@ -53,7 +53,7 @@ export default function Home() {
         <section id="product" className="product wrap">
           <div className="section-heading">
             <p className="eyebrow">PRODUCT · FOUNDER EDITION</p>
-            <h2>先看實物，<br className="mobile-only" />再看取捨。</h2>
+            <h2>先看實物<br className="mobile-only" />再看取捨</h2>
             <p className="section-intro">織紋、佩戴與訓練情境，都用實拍呈現。</p>
           </div>
           <Tabs />
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="wrap selection-layout">
             <div className="section-heading">
               <p className="eyebrow">CHOOSE FOR YOUR TRAINING</p>
-              <h2>你的訓練，<br />需要哪種固定感？</h2>
+              <h2>你的訓練<br />需要哪種固定感</h2>
               <p className="section-intro">用訓練動作、佩戴偏好和預算來比較，不必只看品牌名稱。</p>
               <div className="selection-links">
                 <Link className="text-link" href="/wrist-wrap-finder">用 4 題整理選購方向 <span aria-hidden="true">→</span></Link>
@@ -90,7 +90,7 @@ export default function Home() {
             </figure>
             <div className="story-copy">
               <p className="eyebrow">WHY DW</p>
-              <h2>You don’t have to be the best.<br />Just keep going.</h2>
+              <h2>You don’t have to be the best<br />Just keep going</h2>
               <p>每個人都有自己的起點。DW 也從一位健身者的日常訓練開始；不必等到完美，先把今天這次完成。</p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function Home() {
             </div>
             <div className="founder-copy">
               <p className="eyebrow">FIRST RUN · FOUNDER EDITION</p>
-              <h2>首批 100 雙，<br />是 DW 開始的地方。</h2>
+              <h2>首批 100 雙<br />DW 從這裡開始</h2>
               <p>每雙附手寫編號 Founder Card。對 DW，這是第一件作品的紀錄；對你，也可以是某段訓練歷程的紀念。</p>
               <p className="note">照片中的「##」是編號欄位；實際手寫序號以收到的卡片為準。</p>
               <p className="price-row"><b>NT${site.product.price}</b><span>網站目前列示首批預購價</span></p>
@@ -133,7 +133,7 @@ export default function Home() {
         <section className="follow" id="community">
           <div className="follow-copy">
             <p className="eyebrow">DW COMMUNITY</p>
-            <h2>想看 DW 的近況？</h2>
+            <h2>看看 DW 的近況</h2>
             <p>加入 LINE 社群，查看品牌與產品資訊。</p>
             <a className="pill pill-dark" href={site.links.line} {...ext}>加入 DW LINE 社群 ↗</a>
           </div>
@@ -142,9 +142,9 @@ export default function Home() {
 
       <footer className="foot">
         <div className="wrap">
-          <div className="foot-top"><div><p className="eyebrow">DW · FOUNDER EDITION</p><h2>看完細節，選適合自己的裝備。</h2></div><PurchaseLink className="pill pill-dark" placement="footer">{buyLabel}</PurchaseLink></div>
+          <div className="foot-top"><div><p className="eyebrow">DW · FOUNDER EDITION</p><h2>看完細節<br />選適合自己的裝備</h2></div><PurchaseLink className="pill pill-dark" placement="footer">{buyLabel}</PurchaseLink></div>
           <div className="foot-cols">
-            <div><span>產品</span><a href="#product">Founder Edition</a><a href="#care">使用與保養</a><a href="#faq">常見問題</a></div>
+            <div><span>產品</span><a href="#product">Founder Edition</a><a href="#care">使用與保養</a><a href="#faq">FAQ</a></div>
             <div><span>選購與品牌</span><Link href="/wrist-wrap-finder">Wrist Wrap Finder</Link><Link href="/guides/how-to-choose-wrist-wraps">重訓護腕選購指南</Link><a href="#story">DW 的故事</a></div>
             <div><span>聯絡與購買</span><a href={site.links.line} {...ext}>LINE 社群 ↗</a><PurchaseLink className="foot-purchase-link" placement="footer_text">7-ELEVEN 賣貨便 ↗</PurchaseLink></div>
           </div>
