@@ -18,12 +18,12 @@ a { color: inherit; }
 h1, h2, h3, p, figure { margin: 0; }
 p { max-width: 42em; }
 .wrap { width: min(100%, 1200px); margin-inline: auto; padding-inline: 48px; }
-section { padding-block: 88px; }
+section { padding-block: 76px; }
 h2 { font-size: clamp(30px, 4vw, 48px); font-weight: 600; line-height: 1.22; letter-spacing: -.025em; }
 .mobile-only { display: none; }
 .note { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 12px; }
 .note-light { color: rgba(255,255,255,.7); font-size: 13px; line-height: 1.6; margin-top: 14px; }
-.eyebrow { margin-bottom: 14px; color: var(--muted); font: 600 11px/1.45 Arial, sans-serif; letter-spacing: .08em; }
+.eyebrow { margin-bottom: 14px; color: var(--muted); font: 600 11px/1.45 Arial, sans-serif; letter-spacing: .06em; }
 .muted { color: var(--muted); }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #a5533f; outline-offset: 3px; }
 
@@ -44,8 +44,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 
 /* Product-first hero */
 .hero { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(410px,.95fr); align-items: stretch; overflow: hidden; background: #0f0f0f; color: #fff; border-radius: 0 0 24px 24px; }
-.hero-visual { min-width: 0; min-height: 520px; background: #242424; }
-.hero-img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; }
+.hero-visual { min-width: 0; min-height: 520px; background: #fff; }
+.hero-img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; object-position: center 52%; }
 .hero-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(38px,6vw,88px); }
 .hero-eyebrow { color: #b8b4ab; }
 .hero h1 { max-width: 12em; margin-bottom: 20px; font-size: clamp(36px,5.5vw,64px); font-weight: 600; line-height: 1.17; letter-spacing: -.035em; }
@@ -58,20 +58,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .hero-copy .pill-light { color: #111; }
 
-/* Brand intro and product facts */
-.brand-intro { padding-block: 56px 30px; }
-.slogan, .foot-brand span { font-family: Arial, sans-serif; font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: 0; font-kerning: normal; }
-.slogan { margin-bottom: 24px; color: #504c45; }
-.brand-intro-copy { max-width: 800px; }
-.brand-lead { margin-bottom: 6px; font-size: clamp(21px,3vw,30px); font-weight: 600; line-height: 1.45; letter-spacing: -.02em; }
-.brand-intro-copy .muted { font-size: 15px; }
-.quick-facts { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; margin: 38px 0 0; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); list-style: none; }
+/* Product facts */
+.product-facts { padding-block: 28px 12px; }
+.quick-facts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin: 0; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); list-style: none; }
 .quick-facts li { display: flex; flex-direction: column; gap: 3px; }
-.quick-facts b { font-size: 16px; font-weight: 600; }
+.quick-facts b { font-size: 15px; font-weight: 600; }
 .quick-facts span { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.foot-brand span { font-family: Arial, sans-serif; font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: 0; font-kerning: normal; }
 
 /* Product details */
-.product { padding-top: 76px; padding-bottom: 82px; }
+.product { padding-top: 56px; padding-bottom: 68px; }
 .section-heading { max-width: 720px; margin-bottom: 32px; }
 .section-heading h2, .care-heading h2 { margin-bottom: 12px; }
 .section-intro { max-width: 46em; color: var(--muted); font-size: 15px; line-height: 1.75; }
@@ -94,41 +90,37 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .selection-links { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 28px; }
 .text-link { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; text-decoration: none; }
 .secondary-link { color: #57534b; font-size: 14px; font-weight: 500; }
-.selection-points { margin: 0; padding: 0; list-style: none; }
-.selection-points li { display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 14px; padding: 20px 0; border-top: 1px solid #d4d0c8; }
-.selection-points li > span { padding-top: 3px; color: #8c857b; font: 500 12px/1 Arial,sans-serif; }
-.selection-points b { font-size: 16px; }
-.selection-points p { margin-top: 5px; color: #625e56; font-size: 14px; line-height: 1.7; }
+.selection-note { padding: 24px; border: 1px solid #d4d0c8; background: rgba(255,255,255,.45); }
+.selection-note .eyebrow { margin-bottom: 12px; }
+.selection-note p:not(.eyebrow) { margin-top: 8px; color: #625e56; font-size: 14px; line-height: 1.75; }
+.selection-note b { color: var(--ink); font-size: 16px; }
 
 /* Founder story */
 .story-section { background: #121212; color: #fff; }
 .story-layout { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1fr); align-items: center; gap: clamp(36px,8vw,100px); }
-.story-photo { width: 100%; max-height: 620px; object-fit: cover; }
-.story-copy h2 { max-width: 15em; margin-bottom: 24px; font-family: Arial, var(--sans); font-size: clamp(26px,3.6vw,42px); font-weight: 500; line-height: 1.25; letter-spacing: -.025em; }
-.story-copy > p:not(.eyebrow):not(.brand-signature) { margin: 0 0 14px; color: #d2cec7; font-size: 15px; line-height: 1.85; }
+.story-figure { min-width: 0; }
+.story-photo { width: 100%; max-height: 620px; object-fit: cover; object-position: center 40%; }
+.story-figure figcaption { margin-top: 9px; color: #aaa49b; font-size: 12px; }
+.story-copy h2 { max-width: 15em; margin-bottom: 20px; font-family: Arial, var(--sans); font-size: clamp(26px,3.3vw,40px); font-weight: 500; line-height: 1.25; letter-spacing: -.025em; }
+.story-copy > p:not(.eyebrow) { margin: 0 0 14px; color: #d2cec7; font-size: 15px; line-height: 1.85; }
 .story-copy .eyebrow { color: #aaa49b; }
-.brand-signature { margin-top: 28px; font: 500 12px/1.5 Arial,sans-serif; letter-spacing: 0; }
 
 /* First run / founder card */
 .founder { padding: 72px 24px; background: #292826; }
 .founder-card { display: grid; grid-template-columns: minmax(0,.82fr) minmax(0,1fr); align-items: center; gap: clamp(32px,7vw,86px); width: min(100%,1104px); margin-inline: auto; padding: clamp(28px,5vw,64px); background: var(--bg); }
 .founder-photo { display: flex; justify-content: center; min-width: 0; background: #eeece6; }
-.founder-photo img { width: auto; max-height: 460px; object-fit: contain; }
+.founder-photo { aspect-ratio: 1; overflow: hidden; }
+.founder-photo img { width: 100%; max-height: 460px; aspect-ratio: 1; object-fit: cover; }
 .founder-copy h2 { margin-bottom: 20px; }
-.founder-copy > p:not(.eyebrow):not(.card-no):not(.note):not(.price-row) { margin-bottom: 12px; color: #504c45; font-size: 15px; }
-.card-no { margin-top: 22px; font: 500 clamp(38px,6vw,58px)/1.1 Arial,sans-serif; letter-spacing: -.03em; }
-.card-no span { color: var(--muted); font-size: .55em; }
+.founder-copy > p:not(.eyebrow):not(.note):not(.price-row) { margin-bottom: 12px; color: #504c45; font-size: 15px; }
 .price-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin: 22px 0 14px; color: var(--muted); font-size: 13px; }
 .price-row b { color: var(--ink); font-size: 32px; font-weight: 600; }
 
 /* Care and real product images */
 .care-section { background: #151515; color: #fff; }
-.care-heading { max-width: 700px; margin-bottom: 34px; }
+.care-heading { max-width: 700px; margin-bottom: 24px; }
 .care-heading .eyebrow { color: #aaa49b; }
 .care-heading .section-intro { color: #c5c0b8; }
-.care-photos { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; max-width: 840px; margin-bottom: 48px; }
-.care-photos img { width: 100%; height: clamp(220px,36vw,420px); object-fit: cover; }
-.care-photos figcaption { margin-top: 8px; color: #c5c0b8; font-size: 12px; }
 .care-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 48px; margin: 0; padding: 0; border-top: 1px solid #42413d; list-style: none; }
 .care-list li { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid #42413d; }
 .care-number { min-width: 2em; color: #a6a096; font: 500 12px/1.8 Arial,sans-serif; }
@@ -149,14 +141,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .faq details a { color: var(--accent); }
 .tbc { margin-right: 4px; padding-inline: 4px; background: #f1dd8e; }
 
-/* Editorial closing CTA */
-.follow { position: relative; display: grid; min-height: 390px; place-items: center; overflow: hidden; padding: 76px 24px; color: #fff; text-align: center; }
-.follow-img { object-fit: cover; object-position: center 42%; filter: brightness(.45); }
-.follow-shade { position: absolute; inset: 0; background: rgba(0,0,0,.18); }
-.follow-copy { position: relative; max-width: 650px; }
-.follow .eyebrow { color: rgba(255,255,255,.75); }
-.follow h2 { margin-bottom: 24px; }
-.follow-copy .note-light { max-width: 42em; margin-inline: auto; }
+/* Simple community close */
+.follow { display: grid; min-height: 0; place-items: center; padding: 52px 24px; background: var(--paper); color: var(--ink); text-align: center; }
+.follow-copy { max-width: 650px; }
+.follow .eyebrow { color: var(--muted); }
+.follow h2 { margin-bottom: 12px; }
+.follow-copy > p:not(.eyebrow) { margin: 0 auto 20px; color: var(--muted); font-size: 15px; }
 
 /* Footer */
 .foot { padding-block: 62px 36px; }
@@ -237,7 +227,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   html { scroll-padding-top: 66px; }
   body { font-size: 15px; line-height: 1.72; }
   .wrap { padding-inline: 20px; }
-  section { padding-block: 56px; }
+  section { padding-block: 44px; }
   h2 { font-size: clamp(29px,8vw,36px); }
   .mobile-only { display: initial; }
   .top { min-height: 60px; padding: 6px 16px; }
@@ -246,8 +236,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .top .pill { min-height: 40px; padding-inline: 16px; font-size: 13px; }
   .hero { display: flex; flex-direction: column; border-radius: 0 0 18px 18px; }
   .hero-visual { min-height: 0; }
-  .hero-img { width: 100%; min-height: 0; aspect-ratio: 1.2 / 1; object-fit: cover; }
-  .hero-copy { padding: 25px 20px 28px; }
+  .hero-img { width: 100%; min-height: 0; aspect-ratio: 1.05 / 1; object-fit: cover; object-position: center 52%; }
+  .hero-copy { padding: 24px 20px 25px; }
   .hero h1 { margin-bottom: 14px; font-size: clamp(34px,9vw,42px); line-height: 1.18; }
   .hero-product { font-size: 16px; }
   .hero-l1 { font-size: 13px; line-height: 1.6; }
@@ -257,14 +247,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .btn-row { display: grid; grid-template-columns: 1fr; gap: 9px; margin-top: 16px; }
   .btn-row .pill { width: 100%; min-height: 48px; }
   .note-light { font-size: 12px; }
-  .brand-intro { padding-block: 34px 14px; }
-  .slogan { margin-bottom: 16px; }
-  .brand-lead { font-size: 21px; }
-  .brand-intro-copy .muted { font-size: 13px; }
-  .quick-facts { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 17px 20px; margin-top: 24px; padding-block: 18px; }
-  .quick-facts b { font-size: 14px; }
-  .quick-facts span { font-size: 11px; }
-  .product { padding-top: 50px; padding-bottom: 58px; }
+  .product-facts { padding-block: 10px 0; }
+  .quick-facts { gap: 8px; padding-block: 14px; }
+  .quick-facts li { gap: 2px; }
+  .quick-facts b { font-size: 13px; line-height: 1.4; }
+  .quick-facts span { font-size: 10px; line-height: 1.4; }
+  .product { padding-top: 40px; padding-bottom: 48px; }
   .section-heading { margin-bottom: 23px; }
   .section-intro { font-size: 14px; }
   .tablist { gap: 18px; margin: 0 -20px 20px; padding: 0 20px; }
@@ -275,26 +263,22 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .product-buyline { align-items: stretch; flex-direction: column; gap: 14px; margin-top: 22px; padding-top: 18px; }
   .product-buyline b { font-size: 23px; }
   .product-buyline .pill { width: 100%; }
-  .selection-section { padding-block: 52px; }
+  .selection-section { padding-block: 44px; }
   .selection-layout { grid-template-columns: 1fr; gap: 30px; }
   .selection-links { gap: 13px; margin-top: 22px; }
   .text-link { font-size: 14px; }
-  .selection-points li { grid-template-columns: 32px minmax(0,1fr); gap: 10px; padding-block: 16px; }
-  .selection-points b { font-size: 15px; }
-  .selection-points p { font-size: 13px; }
+  .selection-note { padding: 18px; }
+  .selection-note p:not(.eyebrow) { font-size: 13px; }
   .story-layout { grid-template-columns: 1fr; gap: 24px; }
-  .story-photo { max-height: 420px; aspect-ratio: 4 / 3; object-position: center 36%; }
+  .story-photo { max-height: 420px; aspect-ratio: 4 / 3; object-position: center 40%; }
   .story-copy h2 { font-size: 27px; }
-  .story-copy > p:not(.eyebrow):not(.brand-signature) { font-size: 14px; }
-  .brand-signature { margin-top: 20px; }
-  .founder { padding: 38px 14px; }
+  .story-copy > p:not(.eyebrow) { font-size: 14px; }
+  .founder { padding: 34px 14px; }
   .founder-card { grid-template-columns: 1fr; gap: 24px; padding: 18px 18px 25px; }
-  .founder-photo img { max-height: 300px; }
+  .founder-photo img { max-height: 320px; }
   .founder-copy h2 { font-size: 30px; }
-  .founder-copy > p:not(.eyebrow):not(.card-no):not(.note):not(.price-row) { font-size: 14px; }
-  .care-photos { gap: 10px; margin-bottom: 30px; }
-  .care-photos img { height: auto; aspect-ratio: 3 / 4; }
-  .care-photos figcaption { font-size: 11px; }
+  .founder-copy > p:not(.eyebrow):not(.note):not(.price-row) { font-size: 14px; }
+  .care-heading { margin-bottom: 18px; }
   .care-list { grid-template-columns: 1fr; }
   .care-list li { padding-block: 15px; }
   .care-list p { font-size: 13px; }
@@ -302,8 +286,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .faq summary { min-height: 54px; padding-block: 16px; padding-right: 34px; font-size: 15px; }
   .faq summary::after { top: 14px; }
   .faq details p { margin-right: 12px; font-size: 13px; }
-  .follow { min-height: 340px; padding: 58px 20px; }
-  .follow h2 { font-size: 30px; }
+  .follow { padding: 40px 20px; }
+  .follow h2 { font-size: 28px; }
   .foot { padding-block: 46px 28px; }
   .foot-top { align-items: flex-start; flex-direction: column; gap: 20px; padding-bottom: 26px; }
   .foot-top h2 { font-size: 26px; }
