@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site, careGuide, buyLabel } from "@/config/site";
+import { site, careGuide, buyLabel, LINE_OFFICIAL_URL } from "@/config/site";
 import { Faq } from "@/components/Faq";
 import { Tabs } from "@/components/Tabs";
 import { PurchaseLink } from "@/components/PurchaseLink";
-
-const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
 export default function Home() {
   return (
@@ -95,6 +93,18 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="wrap line-strip-wrap">
+          <aside className="line-question-strip" aria-label="官方 LINE 詢問">
+            <div className="line-strip-copy">
+              <strong>還在比較？</strong>
+              <small>配戴、尺寸，直接問 DW</small>
+            </div>
+            <a className="line-strip-cta" href={LINE_OFFICIAL_URL} target="_blank" rel="noopener noreferrer" data-cta="line-strip">
+              LINE 詢問
+            </a>
+          </aside>
+        </div>
+
         <section className="story-section" id="story">
           <div className="wrap story-layout">
             <figure className="story-figure">
@@ -143,12 +153,44 @@ export default function Home() {
 
         <Faq />
 
-        <section className="follow" id="community">
-          <div className="follow-copy">
-            <p className="eyebrow">DW COMMUNITY</p>
-            <h2>看看 DW 的近況</h2>
-            <p>加入 LINE 社群，查看品牌與產品資訊。</p>
-            <a className="pill pill-dark" href={site.links.line} {...ext}>加入 DW LINE 社群 ↗</a>
+        <section className="line-card-section" id="official-line" aria-labelledby="line-card-title">
+          <div className="wrap">
+            <div className="line-card">
+              <p className="line-card-eyebrow">DW OFFICIAL LINE</p>
+              <h2 id="line-card-title">有問題？直接找 DW。</h2>
+              <p className="line-card-description">想了解護腕、詢問配戴方式，或掌握新品消息，都可以透過官方 LINE 聯絡我們。</p>
+
+              <h3 className="line-card-list-title">加入好友後</h3>
+              <ul className="line-card-benefits">
+                <li>
+                  <span className="line-check" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.4 4.2L19 7" /></svg></span>
+                  <span>查看 DW Founder Edition 護腕</span>
+                </li>
+                <li>
+                  <span className="line-check" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.4 4.2L19 7" /></svg></span>
+                  <span>領取好友專屬首購優惠</span>
+                </li>
+                <li>
+                  <span className="line-check" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.4 4.2L19 7" /></svg></span>
+                  <span>優先參與新品測試與產品投票</span>
+                </li>
+              </ul>
+
+              <a className="line-main-cta" href={LINE_OFFICIAL_URL} target="_blank" rel="noopener noreferrer" data-cta="line-main">
+                <span className="line-main-cta-primary">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5.5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8.2L5 21v-3.5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z" /></svg>
+                  <span>加入 DW 官方 LINE</span>
+                </span>
+                <span className="line-main-cta-secondary">產品諮詢・新品消息・專屬優惠</span>
+              </a>
+              <p className="line-card-note">優惠內容以 LINE 官方帳號公告為準。</p>
+
+              <div className="line-card-browse">
+                <span>先逛逛：</span>
+                <a href="#product">看實物細節</a>
+                <Link href="/guides/how-to-choose-wrist-wraps">選購指南</Link>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -159,7 +201,7 @@ export default function Home() {
           <div className="foot-cols">
             <div><span>產品</span><a href="#product">Founder Edition</a><a href="#care">使用與保養</a><a href="#faq">FAQ</a></div>
             <div><span>選購與品牌</span><Link href="/wrist-wrap-finder">Wrist Wrap Finder</Link><Link href="/guides/how-to-choose-wrist-wraps">重訓護腕選購指南</Link><a href="#story">DW 的故事</a></div>
-            <div><span>聯絡與購買</span><a href={site.links.line} {...ext}>LINE 社群 ↗</a><PurchaseLink className="foot-purchase-link" placement="footer_text">7-ELEVEN 賣貨便 ↗</PurchaseLink></div>
+            <div><span>聯絡與購買</span><a className="line-footer-link" href={LINE_OFFICIAL_URL} target="_blank" rel="noopener noreferrer" data-cta="line-footer">DW 官方 LINE ↗</a><PurchaseLink className="foot-purchase-link" placement="footer_text">7-ELEVEN 賣貨便 ↗</PurchaseLink></div>
           </div>
           <div className="foot-brand">
             <Image src="/images/dw-logo.png" alt="DW" width={700} height={418} />

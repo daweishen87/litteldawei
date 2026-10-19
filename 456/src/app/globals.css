@@ -146,13 +146,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .faq details a { color: var(--accent); }
 .tbc { margin-right: 4px; padding-inline: 4px; background: #f1dd8e; }
 
-/* Simple community close */
-.follow { display: grid; min-height: 0; place-items: center; padding: 52px 24px; background: var(--paper); color: var(--ink); text-align: center; }
-.follow-copy { max-width: 650px; }
-.follow .eyebrow { color: var(--muted); }
-.follow h2 { margin-bottom: 12px; }
-.follow-copy > p:not(.eyebrow) { margin: 0 auto 20px; color: var(--muted); font-size: 15px; }
-
 /* Footer */
 .foot { padding-block: 62px 36px; }
 .foot-top { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-bottom: 36px; border-bottom: 1px solid var(--line); }
@@ -238,7 +231,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .top { min-height: 60px; padding: 6px 16px; }
   .top-logo { height: 33px; }
   .top-nav { display: none; }
-  .top .pill { min-height: 40px; padding-inline: 16px; font-size: 13px; }
+  .top .pill { min-height: 44px; padding-inline: 16px; font-size: 13px; }
   .hero { display: flex; flex-direction: column; border-radius: 0 0 18px 18px; }
   .hero-visual { min-height: 0; }
   .hero-img { width: 100%; height: auto; min-height: 0; aspect-ratio: 1 / 1; object-fit: contain; object-position: center; }
@@ -292,8 +285,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .faq summary { min-height: 54px; padding-block: 16px; padding-right: 34px; font-size: 15px; }
   .faq summary::after { top: 14px; }
   .faq details p { margin-right: 12px; font-size: 13px; }
-  .follow { padding: 40px 20px; }
-  .follow h2 { font-size: 28px; }
   .foot { padding-block: 46px 28px; }
   .foot-top { align-items: flex-start; flex-direction: column; gap: 20px; padding-bottom: 26px; }
   .foot-top h2 { font-size: 26px; }
@@ -316,6 +307,43 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .finder-controls .pill { min-width: 0; flex: 1; padding-inline: 14px; }
   .finder-result { padding: 20px 16px; }
   .finder-result p { font-size: 14px; }
+}
+
+/* Official LINE contact and conversion components */
+.line-card-section { padding-block: 48px; }
+.line-card { width: 100%; padding: 26px 22px; border: 1px solid var(--line); border-radius: 24px; background: var(--paper); color: var(--ink); }
+.line-card-eyebrow { margin-bottom: 12px; color: var(--muted); font: 500 12px/1.5 Arial,sans-serif; letter-spacing: .12em; }
+.line-card h2 { margin-bottom: 10px; font-family: var(--sans); font-size: 27px; font-weight: 700; line-height: 1.25; letter-spacing: 0; }
+.line-card-description { color: var(--muted); font-size: 15px; line-height: 1.7; }
+.line-card-list-title { margin: 22px 0 8px; font-size: 13px; font-weight: 700; line-height: 1.5; }
+.line-card-benefits { margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
+.line-card-benefits li { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.5; }
+.line-check { display: grid; flex: 0 0 24px; width: 24px; height: 24px; place-items: center; border-radius: 50%; background: rgba(6,199,85,.14); color: #06C755; }
+.line-check svg { width: 16px; height: 16px; fill: none; }
+.line-check path { stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.line-main-cta { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 100%; min-height: 68px; padding: 10px 16px; border-radius: 16px; margin-top: 18px; background: #06C755; color: #03230f; text-align: center; text-decoration: none; transition: filter .16s ease; }
+.line-main-cta:hover, .line-strip-cta:hover, .faq-line-cta:hover { filter: brightness(.96); }
+.line-main-cta-primary { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 18px; font-weight: 700; line-height: 1.25; }
+.line-main-cta-primary svg { flex: 0 0 22px; width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.line-main-cta-secondary { font-size: 13px; line-height: 1.35; }
+.line-main-cta:focus-visible, .line-strip-cta:focus-visible, .faq-line-cta:focus-visible { outline: 3px solid #03230f; outline-offset: 4px; }
+.line-card-note { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.5; text-align: center; }
+.line-card-browse { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px; margin-top: 18px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--muted); font-size: 12px; line-height: 1.5; }
+.line-card-browse a { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 6px; color: var(--ink); font-size: 13px; font-weight: 600; text-decoration: none; }
+.line-strip-wrap { margin-block: 22px 30px; }
+.line-question-strip { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 68px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); color: var(--ink); }
+.line-strip-copy { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
+.line-strip-copy strong { font-size: 16px; font-weight: 700; line-height: 1.4; }
+.line-strip-copy small { color: var(--muted); font-size: 13px; line-height: 1.45; }
+.line-strip-cta, .faq-line-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 16px; border-radius: 999px; background: #06C755; color: #03230f !important; font-size: 14px; font-weight: 700; line-height: 1.3; text-decoration: none; white-space: nowrap; transition: filter .16s ease; }
+.faq-line-cta { margin-bottom: 20px; }
+.foot-cols a.line-footer-link { display: inline-flex; align-items: center; min-height: 44px; }
+
+@media (max-width: 600px) {
+  .line-card-section { padding-block: 40px; }
+  .line-strip-wrap { margin-block: 14px 24px; }
+  .line-question-strip { padding-inline: 12px; }
+  .line-strip-cta { padding-inline: 14px; }
 }
 
 .product-carousel { width: 100%; }
@@ -370,6 +398,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 
 @media (prefers-color-scheme: dark) {
   .product-carousel-image-frame { background: #1d1d1b; }
+  .line-card, .line-question-strip { border-color: #3b3b39; background: #1d1d1b; color: #f3f1ea; }
+  .line-card-eyebrow, .line-card-description, .line-card-note, .line-strip-copy small { color: #a09d94; }
+  .line-card-benefits, .line-card-benefits li { border-color: #45433f; }
+  .line-check { color: #3ddc7a; }
+  .line-card-browse { border-top-color: #45433f; color: #a09d94; }
+  .line-card-browse a { color: #f3f1ea; }
 }
 
 @media (prefers-reduced-motion: reduce) {

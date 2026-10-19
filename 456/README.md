@@ -23,7 +23,7 @@ npm run build && npm start
 
 ## 更新商品資訊
 
-價格、規格、賣貨便網址、LINE 網址、保養指南、FAQ 位於 `src/config/site.ts`。出貨及退換貨尚待確認，因此頁面不以猜測補寫。圖片放在 `public/images/`；首屏商品照、實際配戴照及 OG 分享圖分別用於首頁與分享摘要。重複的 `hero.jpg` 已移除。
+價格、規格、賣貨便網址、官方 LINE 網址（`LINE_OFFICIAL_URL`）、保養指南與 FAQ 位於 `src/config/site.ts`。出貨及退換貨尚待確認，因此頁面不以猜測補寫。圖片放在 `public/images/`；首屏商品照、實際配戴照及 OG 分享圖分別用於首頁與分享摘要。重複的 `hero.jpg` 已移除。
 
 ## Vercel 與搜尋索引
 
