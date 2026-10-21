@@ -46,5 +46,5 @@ export const faq: FaqItem[] = [
   { q: "目前價格與庫存是多少？", a: "網站目前列示首批預購價 NT$399。價格、庫存、供應狀態與活動以 7-ELEVEN 賣貨便商品頁面為準。", link: { href: "https://myship.7-11.com.tw/general/detail/GM2610097707229", text: "查看賣貨便商品頁" } },
   { q: "下單後何時出貨？", a: "出貨安排尚待確認，請以商品頁公告與賣場實際資訊為準。", pending: true },
   { q: "退換貨如何辦理？", a: "退換貨政策尚待確認，請在下單前查看賣場公布的規則。", pending: true },
-  { q: "如何加入 DW 官方 LINE？", a: "可以加入 DW 官方 LINE，詢問配戴方式、掌握新品消息，並領取好友專屬首購優惠。", link: { href: LINE_OFFICIAL_URL, text: "加入 DW 官方 LINE" } },
+  { q: "如何加入 DW 官方 LINE？", a: "可以加入 DW 官方 LINE，詢問配戴方式並掌握新品消息。", link: { href: LINE_OFFICIAL_URL, text: "加入 DW 官方 LINE" } },
 ];
