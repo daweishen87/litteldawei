@@ -168,11 +168,11 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="line-check" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.4 4.2L19 7" /></svg></span>
-                  <span>領取好友專屬首購優惠</span>
+                  <span>詢問產品與配戴方式</span>
                 </li>
                 <li>
                   <span className="line-check" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m5 12.5 4.4 4.2L19 7" /></svg></span>
-                  <span>優先參與新品測試與產品投票</span>
+                  <span>掌握 DW 新品消息</span>
                 </li>
               </ul>
 
@@ -181,9 +181,8 @@ export default function Home() {
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5.5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8.2L5 21v-3.5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z" /></svg>
                   <span>加入 DW 官方 LINE</span>
                 </span>
-                <span className="line-main-cta-secondary">產品諮詢・新品消息・專屬優惠</span>
+                <span className="line-main-cta-secondary">產品諮詢・新品消息</span>
               </a>
-              <p className="line-card-note">優惠內容以 LINE 官方帳號公告為準。</p>
 
               <div className="line-card-browse">
                 <span>先逛逛：</span>
