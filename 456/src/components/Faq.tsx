@@ -3,6 +3,17 @@
 import { faq, LINE_OFFICIAL_URL, site } from "@/config/site";
 import { trackEvent } from "@/lib/analytics";
 
+function renderAnswer(answer: string, emphasis?: string[]) {
+  if (!emphasis?.length) return answer;
+
+  const escaped = emphasis.map((phrase) => phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const parts = answer.split(new RegExp(`(${escaped.join("|")})`, "g"));
+
+  return parts.map((part, index) =>
+    emphasis.includes(part) ? <strong key={index}>{part}</strong> : part,
+  );
+}
+
 export function Faq() {
   return (
     <section id="faq">
@@ -17,7 +28,7 @@ export function Faq() {
                 <summary>{item.q}</summary>
                 <p>
                   {item.pending && <span className="tbc">【待確認】</span>}
-                  {item.a}
+                  {renderAnswer(item.a, item.emphasis)}
                   {item.link && !isLineLink && (
                     <>
                       {" "}

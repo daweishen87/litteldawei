@@ -33,7 +33,7 @@ export const careGuide = [
   { title: "收納", text: "確認乾燥後再收起。" },
 ];
 
-export type FaqItem = { q: string; a: string; pending?: boolean; link?: { href: string; text: string } };
+export type FaqItem = { q: string; a: string; pending?: boolean; emphasis?: string[]; link?: { href: string; text: string } };
 
 export const faq: FaqItem[] = [
   { q: "DW 護腕適合哪些訓練動作？", a: "適合臥推、肩推等需要手腕支撐的重量訓練動作，也可依個人需求考慮用於其他讓手腕承受負荷的動作。不同動作的手腕角度、負荷與支撐需求不同，請依訓練情境調整配戴方式。不保證提升重量或避免受傷。" },
@@ -44,7 +44,7 @@ export const faq: FaqItem[] = [
   { q: "護腕可以水洗或機洗嗎？", a: "目前尚未確認可整體水洗或機洗，也未指定清潔劑。建議先以濕布局部輕柔清潔，再依上方保養指南處理。" },
   { q: "尺寸是多少？", a: "網站目前列示約 50 × 8 cm；實際尺寸與配戴感受請以確認後的商品資訊為準。" },
   { q: "目前價格與庫存是多少？", a: "網站目前列示首批預購價 NT$399。價格、庫存、供應狀態與活動以 7-ELEVEN 賣貨便商品頁面為準。", link: { href: "https://myship.7-11.com.tw/general/detail/GM2610097707229", text: "查看賣貨便商品頁" } },
-  { q: "下單後何時出貨？", a: "出貨安排尚待確認，請以商品頁公告與賣場實際資訊為準。", pending: true },
-  { q: "退換貨如何辦理？", a: "退換貨政策尚待確認，請在下單前查看賣場公布的規則。", pending: true },
+  { q: "下單後多久會出貨？", a: "DW 商品將於下單後 7 個工作天內安排出貨，實際配送時間依物流狀況而定。", emphasis: ["7 個工作天內安排出貨"] },
+  { q: "商品可以退換貨嗎？", a: "若商品有瑕疵、寄錯商品或運送損壞，請聯絡 DW 官方客服，我們會協助處理。\n\n如有其他退換貨需求，歡迎先聯絡客服確認，相關事宜將依消費者保護法及其他適用法令辦理。", emphasis: ["商品有瑕疵、寄錯商品或運送損壞", "聯絡 DW 官方客服", "依消費者保護法及其他適用法令辦理"] },
   { q: "如何加入 DW 官方 LINE？", a: "可以加入 DW 官方 LINE，詢問配戴方式並掌握新品消息。", link: { href: LINE_OFFICIAL_URL, text: "加入 DW 官方 LINE" } },
 ];
